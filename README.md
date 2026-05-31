@@ -6,6 +6,7 @@ This repository hosts a styled HTML version of Elizabeth Tatro's professional na
 
 - `index.html`: A beautifully styled, modern web resume ready to be hosted via GitHub Pages.
 - `resume.md`: The resume content formatted specifically for copy-pasting into the Adventure Nannies template.
+- `template.html`: The Adventure Nannies template for the resume.
 
 ## Deployment
 
