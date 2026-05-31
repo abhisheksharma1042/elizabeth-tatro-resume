@@ -36,7 +36,7 @@ Responsibilities:
 Reason Position Ended: The position naturally concluded at the end of 2024, and I transitioned into a role as a Teacher's Aide.
 
 Family Name / Private Family: Private Family
-Start Month/Year – End Month/Year: 2021 (4-Month Contract)
+Start Month/Year – End Month/Year: August 2021 – December 2021
 City, State: Bowling Green, Kentucky
 Nature of position + Title of Role: Part-Time Nanny
 Ages of Children Upon Hire: 6-month-old twins and 2-year-old
@@ -48,7 +48,7 @@ Responsibilities:
 Reason Position Ended: Successfully completed the 4-month temporary contract.
 
 Family Name / Private Family: Private Family
-Start Month/Year – End Month/Year: Summer 2020
+Start Month/Year – End Month/Year: June 2020 - September 2020
 City, State: Bowling Green, Kentucky
 Nature of position + Title of Role: Summer Nanny & House Manager
 Ages of Children Upon Hire: 12 years old
