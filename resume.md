@@ -77,7 +77,7 @@ EDUCATION
 
 Name of University / Program: Western Kentucky University
 City, State: Bowling Green, Kentucky
-Years Attended: 2015 – December 2021
+Years Attended: August 2015 – December 2021
 Degree Earned: Bachelor of Arts in Art, Minor in Psychology
 Special Honors / Achievements: Specialized coursework focus in Developmental Psychology, enhancing my ability to understand and support early childhood milestones and behavior.
 
