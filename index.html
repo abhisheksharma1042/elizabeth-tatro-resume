@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizabeth Tatro | Professional Nanny Resume</title>
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --primary: #2b4c59; /* Deep, grounded teal/blue-green */
+            --primary-light: #427285;
+            --secondary: #dca77c; /* Warm terracotta/beige */
+            --accent: #f4ede3; /* Soft cream background */
+            --text-main: #333333;
+            --text-light: #555555;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --shadow-soft: 0 10px 30px rgba(43, 76, 89, 0.08);
+            --shadow-hover: 0 15px 40px rgba(43, 76, 89, 0.15);
+            
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-main);
+            background-color: var(--accent);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 2rem 1rem;
+        }
+
+        .resume-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .resume-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 4rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-shape {
+            position: absolute;
+            right: -50px;
+            bottom: -50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(220, 167, 124, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .resume-header h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .resume-header .subtitle {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--secondary);
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Body */
+        .resume-body {
+            padding: 3rem;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .resume-section {
+            margin-bottom: 4rem;
+        }
+
+        /* Experience Cards */
+        .experience-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--secondary);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .card-title h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--text-main);
+            margin-bottom: 0.3rem;
+        }
+
+        .role-badge {
+            display: inline-block;
+            background-color: rgba(220, 167, 124, 0.2);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .card-meta {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta .date {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .card-meta .location {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .card-details {
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary-light);
+        }
+
+        .card-details p {
+            margin-bottom: 0.25rem;
+        }
+        .card-details p:last-child {
+            margin-bottom: 0;
+        }
+
+        .responsibilities-list {
+            padding-left: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .responsibilities-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 0.5rem;
+        }
+
+        .responsibilities-list li::marker {
+            color: var(--secondary);
+        }
+
+        /* Bottom Grid for Education & Skills */
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        /* Education Card */
+        .education-card {
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            background: rgba(43, 76, 89, 0.03);
+            border: 1px solid rgba(43, 76, 89, 0.1);
+        }
+
+        .education-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .degree {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .edu-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .honors-box {
+            font-size: 0.9rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--secondary);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .skill-item:hover {
+            border-color: var(--primary);
+            background: rgba(43, 76, 89, 0.02);
+            transform: translateX(5px);
+        }
+
+        .skill-icon {
+            font-size: 1.5rem;
+        }
+
+        .skill-text {
+            font-weight: 500;
+        }
+
+        /* Animations */
+        .animate-up {
+            animation: slideUp 0.8s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .resume-header {
+                padding: 3rem 2rem;
+            }
+            .resume-body {
+                padding: 2rem;
+            }
+            .card-header {
+                flex-direction: column;
+            }
+            .card-meta {
+                text-align: left;
+            }
+            .bottom-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Resume of Elizabeth Tatro - Warm, Grounded, and Educationally-minded Professional Nanny.">
+</head>
+<body>
+    <div class="resume-container">
+        <!-- HEADER -->
+        <header class="resume-header">
+            <div class="header-content">
+                <h1 class="animate-up">Elizabeth Tatro</h1>
+                <p class="subtitle animate-up delay-1">Professional Career Nanny & Educator</p>
+                <div class="contact-info animate-up delay-2">
+                    <span><i class="icon">📍</i> Irving, TX</span>
+                    <span><i class="icon">📞</i> 502.291.2725</span>
+                    <span><i class="icon">✉️</i> elizabeth.tatro1234@gmail.com</span>
+                </div>
+            </div>
+            <div class="header-shape"></div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main class="resume-body">
+            
+            <!-- CHILDCARE EXPERIENCE -->
+            <section class="resume-section fade-in">
+                <h2 class="section-title">Childcare Experience</h2>
+                
+                <!-- Experience 1 -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3>Private Family</h3>
+                            <span class="role-badge">Full-Time Nanny</span>
+                        </div>
+                        <div class="card-meta">
+                            <span class="date">December 2025 – Present</span>
+                            <span class="location">Plano, Texas</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p><strong>Ages of Children Upon Hire:</strong> 6 months old</p>
+                        <p><strong>Reason Position Ended:</strong> The initial contract was successfully completed and extended for another 6 months. Seeking a long-term career opportunity focused on child education.</p>
+                    </div>
+                    <ul class="responsibilities-list">
+                        <li>Provide comprehensive, educationally-minded care from 9:00 AM to 5:00 PM while collaborating seamlessly with a work-from-home parent.</li>
+                        <li>Actively guide and support major developmental milestones, transitioning the child from tummy-time and crawling to walking and running.</li>
+                        <li>Foster intellectual development through daily phonics practice and language repetition using nursery rhymes and active play.</li>
+                        <li>Manage consistent daily routines including nap times, feedings, and engaging outdoor playtime.</li>
+                        <li>Maintain a tidy, organized environment by performing light daily cleanup of all child-related areas and items used throughout the day.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3>Private Family</h3>
+                            <span class="role-badge">Nanny & Family Assistant</span>
+                        </div>
+                        <div class="card-meta">
+                            <span class="date">June 2023 – December 2024</span>
+                            <span class="location">Louisville, Kentucky</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p><strong>Ages of Children Upon Hire:</strong> 3 and 12 years old</p>
+                        <p><strong>Reason Position Ended:</strong> The position naturally concluded at the end of 2024, and I transitioned into a role as a Teacher's Aide.</p>
+                    </div>
+                    <ul class="responsibilities-list">
+                        <li>Provided adaptable, high-level support for the family, earning a promotion to Family Assistant after six months due to strong organizational and communication skills.</li>
+                        <li>Acted as the primary educational provider for the 3-year-old, developing consistent daily routines and utilizing Montessori-style teaching practices to foster a creative learning space.</li>
+                        <li>Traveled with the family to Hawaii, providing 24/7 round-the-clock coverage and overnight care while seamlessly managing travel logistics, luggage, and packing.</li>
+                        <li>Coordinated a busy household schedule, managing daily school pick-ups, drop-offs, and healthy meal preparation.</li>
+                        <li>Provided extensive family pet care for three dogs, demonstrating reliability and comfort with animals.</li>
+                        <li>Maintained a calm and grounded demeanor while navigating travel and a busy home environment.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3>Private Family</h3>
+                            <span class="role-badge">Part-Time Nanny</span>
+                        </div>
+                        <div class="card-meta">
+                            <span class="date">2021 (4-Month Contract)</span>
+                            <span class="location">Bowling Green, Kentucky</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p><strong>Ages of Children Upon Hire:</strong> 6-month-old twins and 2-year-old</p>
+                        <p><strong>Reason Position Ended:</strong> Successfully completed the 4-month temporary contract.</p>
+                    </div>
+                    <ul class="responsibilities-list">
+                        <li>Provided highly attentive, focused care for infant twins and an active toddler, collaborating daily with a work-from-home mother.</li>
+                        <li>Managed structured nap schedules and feeding routines, ensuring a calm and nurturing environment for all three children.</li>
+                        <li>Assisted the family with light housekeeping duties to maintain an organized and efficient home.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3>Private Family</h3>
+                            <span class="role-badge">Summer Nanny & House Manager</span>
+                        </div>
+                        <div class="card-meta">
+                            <span class="date">Summer 2020</span>
+                            <span class="location">Bowling Green, Kentucky</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p><strong>Ages of Children Upon Hire:</strong> 12 years old</p>
+                        <p><strong>Reason Position Ended:</strong> Successfully completed the summer contract and transitioned to occasional pet/house sitting.</p>
+                    </div>
+                    <ul class="responsibilities-list">
+                        <li>Created and executed a highly engaging, activity-oriented summer program for a pre-teen, including baking, tie-dying, and creative projects.</li>
+                        <li>Planned, coordinated, and chaperoned multiple day trips, including excursions to local caves, water parks, and outings with friends.</li>
+                        <li>Continued a trusted relationship with the family following the summer contract, providing ongoing pet sitting and house sitting services.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- EDUCATION EXPERIENCE -->
+            <section class="resume-section fade-in">
+                <h2 class="section-title">Education Experience</h2>
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3>Jefferson County Public Schools</h3>
+                            <span class="role-badge">Teacher’s Aide</span>
+                        </div>
+                        <div class="card-meta">
+                            <span class="date">January 2025 – May 2025</span>
+                            <span class="location">Louisville, Kentucky</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p><strong>Ages of Children:</strong> Kindergarten through Elementary</p>
+                        <p><strong>Reason Position Ended:</strong> Position concluded at the end of the academic school year.</p>
+                    </div>
+                    <ul class="responsibilities-list">
+                        <li>Supported kindergarten classrooms with daily educational activities and managed student behavior.</li>
+                        <li>Transitioned to a library role, organizing materials and collaborating with the school librarian to develop and execute engaging lesson plans for all age groups.</li>
+                        <li>Stayed after school to monitor and assist with extracurricular activities, including the Theater Club and Quick Recall team.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ACADEMIC EDUCATION & SKILLS -->
+            <div class="bottom-grid">
+                <section class="resume-section fade-in">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-card">
+                        <h3>Western Kentucky University</h3>
+                        <p class="degree">Bachelor of Arts in Art, Minor in Psychology</p>
+                        <p class="edu-meta">Bowling Green, Kentucky | 2015 – December 2021</p>
+                        <div class="honors-box">
+                            <strong>Special Focus:</strong> Specialized coursework in Developmental Psychology, enhancing ability to understand and support early childhood milestones and behavior.
+                        </div>
+                    </div>
+                </section>
+
+                <section class="resume-section fade-in">
+                    <h2 class="section-title">Special Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-icon">🎨</span>
+                            <span class="skill-text">Professional Artist</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">🌐</span>
+                            <span class="skill-text">Conversational Spanish</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">🛟</span>
+                            <span class="skill-text">Professional Lifeguard & Swim Coach</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">❤️</span>
+                            <span class="skill-text">CPR & First Aid Certified</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">✈️</span>
+                            <span class="skill-text">Valid Passport & Driver’s License</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Simple Intersection Observer to fade in elements
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
